@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageView Solarbtn;
+    ImageView Porientation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Solarbtn = (ImageView) findViewById(R.id.imageView9);
         Solarbtn.setOnClickListener(this);
+
+        Porientation = (ImageView) findViewById(R.id.imageView10);
+        Porientation.setOnClickListener(this);
     }
 
     @Override
@@ -26,6 +30,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imageView9:
                 Intent i_solar = new Intent(MainActivity.this,SolarActivity.class);
                 startActivity(i_solar);
+                break;
+            case  R.id.imageView10:
+                Intent i_p_orient = new Intent(MainActivity.this,POrientationActivity.class);
+                startActivity(i_p_orient);
                 break;
         }
 
